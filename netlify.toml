@@ -24,6 +24,11 @@
   status = 200
 
 [[redirects]]
+  from = "/output.css"
+  to = "/src/output.css"
+  status = 200
+
+[[redirects]]
   from = "/src/index.html"
   to = "/"
   status = 301
