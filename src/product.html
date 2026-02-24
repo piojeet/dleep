@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div
+    class="text-[11px] sm:text-xs text-center flex items-center justify-center flex-wrap bg-accent sm:h-[36px] h-[45px] gap-1 sm:gap-2 md:px-8 px-3">
+    <div>For styling assistance & customizations, WhatsApp us at <a href="tel:+919211388816"
+        class="font-bold underline">+91-9211388816</a></div>
+  </div>
+
+  <header class="fixed sm:top-[36px] top-[45px] w-full z-50 transition-all duration-300 bg-white">
+    <div class="md:px-8 px-4 sm:px-4 bg-white">
+      <div class="max-w-7xl w-full mx-auto">
+        <div class="flex flex-wrap md:flex-nowrap items-center justify-between gap-3 py-3 md:py-0 md:min-h-[87px]">
+
+          <div class="flex items-center gap-3">
+            <button type="button" aria-pressed="false" aria-label="menu open"
+              class="js-mobile-menu-toggle md:hidden text-xs font-semibold cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-text-align-justify-icon lucide-text-align-justify">
+                <path d="M3 5h18" />
+                <path d="M3 12h18" />
+                <path d="M3 19h18" />
+              </svg>
+            </button>
+
+            <div class="flex items-center justify-between sm:gap-2 gap-1 shrink-0">
+              <div>
+                <a href="./index.html">
+                  <!-- <img id="logo-default" src="../assets/images/logo.avif" alt="logo" decoding="async"
+                    class="size-9 sm:size-11 md:size-12" width="48" height="48" /> -->
+                    <img id="logo-red" src="../assets/images/logo.png" alt="logo" decoding="async"
+                    class="size-14 md:size-16" width="56" height="56" />
+                </a>
+              </div>
+
+              <div>
+                <a href="./index.html">
+                  <span class="flex flex-col">
+                    <span class="text-[22px] sm:text-[24px] md:text-[28px] leading-none font-bold text-primary">GG
+                      Fashion</span>
+                    <span
+                      class="text-[10px] sm:text-[11px] md:text-[13px] leading-none font-normal text-primary">!!Your
+                      Fashion, Our
+                      Passion!!</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="order-3 md:order-0 h-[42px] sm:h-[45px] md:h-[47px] flex items-center justify-center gap-2 sm:gap-3 max-w-[427px] w-full md:min-w-[300px] min-w-0 rounded-[57px] overflow-hidden px-3 sm:px-4 border border-[#DDDDDD] bg-[#FAFAFA6B]">
+            <div>
+              <img src="../assets/images/icons/search.svg" alt="search" width="20" height="20"
+                class="size-4 sm:size-5" decoding="async" />
+            </div>
+            <input type="text" name="search" id="search-input" placeholder="Search for products, brands and more"
+              class="h-full w-full rounded-[57px] outline-none border-0 bg-transparent font-normal text-xs sm:text-sm text-[#313131] placeholder:text-[#313131]">
+          </div>
+
+          <div class="flex gap-3 sm:gap-4 md:gap-5 items-center justify-end shrink-0">
+
+            <a href=""><img src="../assets/images/icons/heart.svg" alt="wish list" width="27" height="27"
+                class="js-header-icon size-5 sm:size-6 md:size-7 invert-100" decoding="async" /></a>
+            <a href=""><img src="../assets/images/icons/user.svg" alt="wish list" width="27" height="27"
+                class="js-header-icon size-5 sm:size-6 md:size-7 invert-100" decoding="async" /></a>
+            <a href="./cart.html" class="relative">
+              <img src="../assets/images/icons/cart.svg" alt="Cart" width="27" height="27"
+                class="js-header-icon size-5 sm:size-6 md:size-7 invert-100" decoding="async" />
+                <span
+                  class="js-cart-count-badge absolute sm:top-1 -top-0.5 -right-1 size-[13px] bg-primary rounded-full text-[8px] flex items-center justify-center font-bold text-white">1</span>
+            </a>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+
+  </header>
+
+  <div
+    class="js-mobile-menu -left-full md:hidden border-t border-[#FFFFFF38] bg-white px-4 py-3 fixed top-0 w-full h-full overflow-y-auto z-50 transition-all duration-300">
+    <button type="button" aria-pressed="false" aria-label="menu closed"
+      class="js-mobile-menu-toggle-close flex size-8 ml-auto border items-center justify-center border-border text-[#2e2e2e] cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-x-icon lucide-x">
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    </button>
+    <ul class="flex flex-col font-medium text-sm mt-4">
+      <li class="relative"><a
+          class="js-nav-dropdown-trigger-mobile inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Big
+          Luxury Sale</a>
+
+        <div class="js-nav-dropdown-panel-mobile fixed top-0 left-0 w-full h-full z-100 bg-white pointer-events-none"
+          style="transform: translateX(100%); transition: transform 300ms ease;">
+          <button type="button"
+            class="js-nav-dropdown-panel-mobile-close flex size-8 ml-auto mt-3 mr-4 border items-center justify-center border-border text-[#2e2e2e] cursor-pointer"
+            aria-label="close sub menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-x-icon lucide-x">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+          <div class="flex flex-wrap gap-5 md:gap-0 p-4">
+            <div class="w-full md:flex-2/6 md:max-w-2/6 flex flex-col sm:flex-row md:flex-row justify-between gap-5">
+              <div class="space-y-1">
+                <div class="text-sm font-medium text-primary-hover uppercase">Category</div>
+                <ul class="">
+                  <li>
+                    <a href=""
+                      class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Sarees</a>
+                  </li>
+                  <li>
+                    <a href=""
+                      class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Sarees</a>
+                  </li>
+                  <li>
+                    <a href=""
+                      class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Sarees</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="space-y-1">
+                <div class="text-sm font-medium text-primary-hover uppercase">Collections</div>
+                <ul class="">
+                  <li>
+                    <a href=""
+                      class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Sarees</a>
+                  </li>
+                  <li>
+                    <a href=""
+                      class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Sarees</a>
+                  </li>
+                  <li>
+                    <a href=""
+                      class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Sarees</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </li>
+      <li><a
+          class="js-nav-dropdown-trigger-mobile inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">New
+          Arrivals</a>
+
+        <div class="js-nav-dropdown-panel-mobile fixed top-0 left-0 w-full h-full z-100 bg-white pointer-events-none"
+          style="transform: translateX(100%); transition: transform 300ms ease;">
+          <button type="button"
+            class="js-nav-dropdown-panel-mobile-close flex size-8 ml-auto mt-3 mr-4 border items-center justify-center border-border text-[#2e2e2e] cursor-pointer"
+            aria-label="close sub menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-x-icon lucide-x">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+          <div class="flex flex-wrap gap-5 md:gap-0 p-4">
+            <div class="w-full md:flex-2/6 md:max-w-2/6 flex flex-col sm:flex-row md:flex-row justify-between gap-5">
+              <div class="space-y-1">
+                <div class="text-sm font-medium text-primary-hover uppercase">Category2</div>
+                <ul class="">
+                  <li>
+                    <a href=""
+                      class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Sarees</a>
+                  </li>
+                  <li>
+                    <a href=""
+                      class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Sarees</a>
+                  </li>
+                  <li>
+                    <a href=""
+                      class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Sarees</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="space-y-1">
+                <div class="text-sm font-medium text-primary-hover uppercase">Collections</div>
+                <ul class="">
+                  <li>
+                    <a href=""
+                      class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Sarees</a>
+                  </li>
+                  <li>
+                    <a href=""
+                      class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Sarees</a>
+                  </li>
+                  <li>
+                    <a href=""
+                      class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Sarees</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </li>
+      <li><a href="#"
+          class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Wedding
+          Collection</a></li>
+      <li><a href="#"
+          class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Sarees</a>
+      </li>
+      <li><a href="#"
+          class="inline-flex justify-between items-center w-full py-4 text-black hover:text-primary border-b border-border hover:border-primary transition-all duration-150 font-medium">Lehengas</a>
+      </li>
+    </ul>
+  </div>
+
+  <main class="pt-[80px]">
+    <section class="md:px-8 px-4">
+      <h2 class="sr-only">Product Listing</h2>
+      <div class="max-w-7xl w-full mx-auto py-8 sm:py-10 md:py-14">
+        <div class="flex flex-wrap justify-between items-start md:items-end gap-3 border-b border-[#e0e0e0] pb-4 mb-6">
+          <div class="space-y-2">
+            <div>
+              <a href="/index.html" class="text-sm text-[#888888] font-normal">Home /</a> <span
+                class="text-sm text-[#888888] font-normal">Search Results</span>
+            </div>
+            <div>
+              <span class="md:text-2xl sm:text-lg font-normal text-black">Results for <span id="results-query"
+                  class="font-bold">"Sarees"</span> </span>
+              <span id="results-count" class="text-[#888888] font-normal text-sm md:text-base">(0 items)</span>
+            </div>
+          </div>
+          <div class="hidden md:flex items-center gap-2 border border-[#e0e0e0] rounded-[3px] px-3 relative">
+            <div class="relative w-full flex items-center justify-between gap-2 pr-4">
+              <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 5C0 4.44772 0.447715 4 1 4H9C9.55228 4 10 4.44772 10 5C10 5.55228 9.55229 6 9 6H1C0.447715 6 0 5.55228 0 5ZM0 1C0 0.447715 0.447715 0 1 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H1C0.447715 2 0 1.55228 0 1ZM0 9C0 8.44771 0.447715 8 1 8H3C3.55228 8 4 8.44771 4 9C4 9.55229 3.55228 10 3 10H1C0.447715 10 0 9.55229 0 9Z"
+                  fill="#646464" />
+              </svg>
+              <select data-sort-control
+                class="appearance-none w-full outline-none border-0 bg-transparent py-2 text-sm text-[#646464]">
+                <option value="newest" selected>Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+              </select>
+            </div>
+
+            <span class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center text-[#646464]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-chevron-down-icon lucide-chevron-down">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </span>
+
+          </div>
+
+          <div class="w-full md:hidden flex items-center justify-end gap-2">
+            <button id="mobile-filter-open" type="button"
+              class="h-9 px-3 border border-[#e0e0e0] text-text-secondary text-sm font-medium flex items-center gap-2">
+              <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 5C0 4.44772 0.447715 4 1 4H9C9.55228 4 10 4.44772 10 5C10 5.55228 9.55229 6 9 6H1C0.447715 6 0 5.55228 0 5ZM0 1C0 0.447715 0.447715 0 1 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H1C0.447715 2 0 1.55228 0 1ZM0 9C0 8.44771 0.447715 8 1 8H3C3.55228 8 4 8.44771 4 9C4 9.55229 3.55228 10 3 10H1C0.447715 10 0 9.55229 0 9Z"
+                  fill="#646464" />
+              </svg>
+              Filters
+            </button>
+            <div class="h-9 border border-[#e0e0e0] rounded-[3px] px-3 relative">
+              <select data-sort-control
+                class="appearance-none min-w-[145px] w-full h-full outline-none border-0 bg-transparent pr-5 text-sm text-text-secondary">
+                <option value="newest" selected>Sort By Newer</option>
+                <option value="oldest">Sort By Older</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+              </select>
+              <span class="absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-[#646464]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div id="mobile-filter-overlay" class="fixed inset-0 bg-black/45 z-40 hidden md:hidden"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6">
+          <div id="mobile-filter-panel"
+            class="fixed md:sticky top-0 md:top-24 left-0 z-50 md:z-auto h-screen md:h-fit w-[86vw] max-w-[320px] md:max-w-none md:w-auto bg-white md:bg-transparent shadow-xl md:shadow-none overflow-y-auto transform -translate-x-full md:translate-x-0 transition-transform duration-300 px-4 py-5 md:p-0 text-sm leading-relaxed rounded-r-2xl md:rounded-none border-r border-[#ececec] md:border-0">
+            <div class="md:hidden flex items-center justify-between pb-3 mb-4 border-b border-[#e0e0e0]">
+              <span class="font-bold text-lg">Filters</span>
+              <button id="mobile-filter-close" type="button" class="text-[#444] text-xl leading-none size-8 border border-[#dddddd] flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-x-icon lucide-x">
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="border-b border-[#e0e0e0] pb-4 mb-2">
+              <div class="flex items-center justify-between py-3 cursor-pointer">
+                <span class="font-bold uppercase">Category</span>
+                <span class="text-text-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-minus-icon lucide-minus">
+                    <path d="M5 12h14" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-plus-icon lucide-plus">
+                    <path d="M5 12h14" />
+                    <path d="M12 5v14" />
+                  </svg>
+                </span>
+              </div>
+
+              <div>
+                <div class="space-y-1">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <input type="checkbox" name="category" id="category-sarees" class="accent-primary-hover"
+                        data-filter-key="category" data-filter-value="Sarees">
+                      <label for="category-sarees" class="">
+                        <span class="text-[#444444] font-normal">Sarees</span>
+                      </label>
+                    </div>
+                    <div data-filter-count-key="category" data-filter-count-value="Sarees">(0)</div>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <input type="checkbox" name="category" id="category-lehengas" class="accent-primary-hover"
+                        data-filter-key="category" data-filter-value="Lehengas">
+                      <label for="category-lehengas" class="">
+                        <span class="text-[#444444] font-normal">Lehengas</span>
+                      </label>
+                    </div>
+                    <div data-filter-count-key="category" data-filter-count-value="Lehengas">(0)</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="border-b border-[#e0e0e0] pb-4 mb-2">
+              <div class="flex items-center justify-between py-3">
+                <span class="font-bold uppercase">Price</span>
+                <span class="text-text-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-minus-icon lucide-minus">
+                    <path d="M5 12h14" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-plus-icon lucide-plus">
+                    <path d="M5 12h14" />
+                    <path d="M12 5v14" />
+                  </svg>
+                </span>
+              </div>
+
+              <div>
+                <div class="space-y-1">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <input type="checkbox" name="price" id="price-below-1000" class="accent-primary-hover"
+                        data-filter-key="price" data-filter-value="below-1000">
+                      <label for="price-below-1000" class="">
+                        <span class="text-[#444444] font-normal">Below ₹1,000</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <input type="checkbox" name="price" id="price-1000-2500" class="accent-primary-hover"
+                        data-filter-key="price" data-filter-value="1000-2500">
+                      <label for="price-1000-2500" class="">
+                        <span class="text-[#444444] font-normal">₹1,000 - ₹2,500</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="border-b border-[#e0e0e0] pb-4 mb-2">
+              <div class="flex items-center justify-between py-3">
+                <span class="font-bold uppercase">Occasion</span>
+                <span class="text-text-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-minus-icon lucide-minus">
+                    <path d="M5 12h14" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-plus-icon lucide-plus">
+                    <path d="M5 12h14" />
+                    <path d="M12 5v14" />
+                  </svg>
+                </span>
+              </div>
+
+              <div>
+                <div class="space-y-1">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <input type="checkbox" name="occasion" id="occasion-wedding" class="accent-primary-hover"
+                        data-filter-key="occasion" data-filter-value="Wedding">
+                      <label for="occasion-wedding" class="">
+                        <span class="text-[#444444] font-normal">Wedding</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <input type="checkbox" name="occasion" id="occasion-party-wear" class="accent-primary-hover"
+                        data-filter-key="occasion" data-filter-value="Party Wear">
+                      <label for="occasion-party-wear" class="">
+                        <span class="text-[#444444] font-normal">Party Wear</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="border-b border-[#e0e0e0] pb-4 mb-2">
+              <div class="flex items-center justify-between py-3">
+                <span class="font-bold uppercase">Fabric</span>
+                <span class="text-text-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-minus-icon lucide-minus">
+                    <path d="M5 12h14" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-plus-icon lucide-plus">
+                    <path d="M5 12h14" />
+                    <path d="M12 5v14" />
+                  </svg>
+                </span>
+              </div>
+
+              <div>
+                <div class="space-y-1">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <input type="checkbox" name="fabric" id="fabric-banarasi-silk" class="accent-primary-hover"
+                        data-filter-key="fabric" data-filter-value="Banarasi Silk">
+                      <label for="fabric-banarasi-silk" class="">
+                        <span class="text-[#444444] font-normal">Banarasi Silk</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <input type="checkbox" name="fabric" id="fabric-georgette" class="accent-primary-hover"
+                        data-filter-key="fabric" data-filter-value="Georgette">
+                      <label for="fabric-georgette" class="">
+                        <span class="text-[#444444] font-normal">Georgette</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="border-b border-[#e0e0e0] pb-4 mb-2">
+              <div class="flex items-center justify-between py-3">
+                <span class="font-bold uppercase">Work & Pattern</span>
+                <span class="text-text-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-minus-icon lucide-minus">
+                    <path d="M5 12h14" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-plus-icon lucide-plus">
+                    <path d="M5 12h14" />
+                    <path d="M12 5v14" />
+                  </svg>
+                </span>
+              </div>
+
+              <div>
+                <div class="space-y-1">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <input type="checkbox" name="work" id="work-embroidered" class="accent-primary-hover"
+                        data-filter-key="work" data-filter-value="Embroidered">
+                      <label for="work-embroidered" class="">
+                        <span class="text-[#444444] font-normal">Embroidered</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                      <input type="checkbox" name="work" id="work-zari" class="accent-primary-hover"
+                        data-filter-key="work" data-filter-value="Zari Work">
+                      <label for="work-zari" class="">
+                        <span class="text-[#444444] font-normal">Zari Work</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="border-b border-[#e0e0e0] pb-4 mb-2">
+              <div class="flex items-center justify-between py-3">
+                <span class="font-bold uppercase">Size</span>
+                <span class="text-text-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-minus-icon lucide-minus">
+                    <path d="M5 12h14" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-plus-icon lucide-plus">
+                    <path d="M5 12h14" />
+                    <path d="M12 5v14" />
+                  </svg>
+                </span>
+              </div>
+
+              <div>
+                <div>
+                  <div class="flex items-center gap-3">
+
+                    <button type="button" data-filter-key="size" data-filter-value="XS"
+                      class="text-[#444444] font-normal py-1 px-3 text-sm flex items-center gap-2 border border-[#e0e0e0] cursor-pointer">XS</button>
+                    <button type="button" data-filter-key="size" data-filter-value="S"
+                      class="text-[#444444] font-normal py-1 px-3 text-sm flex items-center gap-2 border border-[#e0e0e0] cursor-pointer">S</button>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="border-b border-[#e0e0e0] pb-4 mb-2">
+              <div class="flex items-center justify-between py-3">
+                <span class="font-bold uppercase">Color</span>
+                <span class="text-text-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-minus-icon lucide-minus">
+                    <path d="M5 12h14" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-plus-icon lucide-plus">
+                    <path d="M5 12h14" />
+                    <path d="M12 5v14" />
+                  </svg>
+                </span>
+              </div>
+
+              <div>
+                <div>
+                  <div class="flex items-center gap-3">
+                    <button type="button" data-filter-key="color" data-filter-value="Pink"
+                      class="flex items-center size-8 rounded-full overflow-hidden shrink-0 hover:scale-110 transition-colors cursor-pointer border-transparent border p-px">
+                      <span class="w-full h-full bg-primary border border-[#e0e0e0] rounded-full"></span>
+                    </button>
+                    <button type="button" data-filter-key="color" data-filter-value="Red"
+                      class="flex items-center size-8 rounded-full overflow-hidden shrink-0 hover:scale-110 transition-colors cursor-pointer border-transparent border p-px">
+                      <span class="w-full h-full bg-[#F44336] border border-[#e0e0e0] rounded-full"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="pb-4">
+              <div class="flex items-center justify-between py-3">
+                <span class="font-bold uppercase">Discount</span>
+                <span class="text-text-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-minus-icon lucide-minus">
+                    <path d="M5 12h14" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-plus-icon lucide-plus">
+                    <path d="M5 12h14" />
+                    <path d="M12 5v14" />
+                  </svg>
+                </span>
+              </div>
+
+              <div>
+                <div class="space-y-1">
+                  <div class="flex items-center">
+                    <div class="flex items-center gap-2">
+                      <input type="checkbox" name="discount" id="discount-10" class="accent-primary-hover"
+                        data-filter-key="discount" data-filter-value="10">
+                      <label for="discount-10" class="">
+                        <span class="text-[#444444] font-normal">10% and above</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="flex items-center gap-2">
+                      <input type="checkbox" name="discount" id="discount-30" class="accent-primary-hover"
+                        data-filter-key="discount" data-filter-value="30">
+                      <label for="discount-30" class="">
+                        <span class="text-[#444444] font-normal">30% and above</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="flex items-center gap-2">
+                      <input type="checkbox" name="discount" id="discount-50" class="accent-primary-hover"
+                        data-filter-key="discount" data-filter-value="50">
+                      <label for="discount-50" class="">
+                        <span class="text-[#444444] font-normal">50% and above</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div>
+            <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6"></div>
+
+            <div id="pagination" class="flex items-center gap-2 md:justify-end justify-center mt-6">
+              <div id="pagination-pages" class="flex items-center gap-2">
+                <button type="button"
+                  class="md:size-10 size-8 shrink-0 bg-primary flex items-center justify-center font-normal text-white cursor-pointer">1</button>
+              </div>
+              <button id="pagination-next" type="button"
+                class="md:size-10 size-8 shrink-0 flex items-center justify-center font-normal text-text-secondary cursor-pointer border border-[#dddddd]"
+                aria-label="Next page">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11.3594 8.35938L6.35938 13.3594C6.30729 13.401 6.2526 13.4349 6.19531 13.4609C6.13802 13.487 6.07292 13.5 6 13.5C5.86458 13.5 5.7474 13.4505 5.64844 13.3516C5.54948 13.2526 5.5 13.1354 5.5 13C5.5 12.9271 5.51302 12.862 5.53906 12.8047C5.5651 12.7474 5.59896 12.6927 5.64062 12.6406L10.2969 8L5.64062 3.35938C5.59896 3.30729 5.5651 3.2526 5.53906 3.19531C5.51302 3.13802 5.5 3.07292 5.5 3C5.5 2.86458 5.54948 2.7474 5.64844 2.64844C5.7474 2.54948 5.86458 2.5 6 2.5C6.07292 2.5 6.13802 2.51302 6.19531 2.53906C6.2526 2.5651 6.30729 2.59896 6.35938 2.64062L11.3594 7.64062C11.401 7.69271 11.4349 7.7474 11.4609 7.80469C11.487 7.86198 11.5 7.92708 11.5 8C11.5 8.07292 11.487 8.13802 11.4609 8.19531C11.4349 8.2526 11.401 8.30729 11.3594 8.35938Z"
+                    fill="#1A1A1A" />
+                </svg>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="bg-[#FBFBFB] px-4 md:px-8">
+      <div class="max-w-7xl mx-auto pt-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-12">
+
+          <div>
+            <h3 class="font-bold text-sm tracking-wider mb-4">ABOUT GG FASHION</h3>
+            <p class="text-sm leading-relaxed mb-6 font-normal text-[#5f5f5f]">
+              Your destination for premium ethnic wear. We blend traditional craftsmanship with modern silhouettes to
+              bring you the finest Sarees, Lehengas, and Suits.
+            </p>
+            <div class="flex gap-4 mb-6">
+
+              <a href="#" class="w-10 h-10 rounded-full border border-border flex items-center justify-center">
+                <img src="../assets/images/icons/facebook.svg" alt="facebook" decoding="async" loading="lazy" />
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full border border-border flex items-center justify-center">
+                <img src="../assets/images/icons/youtube.svg" alt="youtube" decoding="async" loading="lazy" />
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full border border-border flex items-center justify-center">
+                <img src="../assets/images/icons/instagram.svg" alt="instagram" decoding="async" loading="lazy" />
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full border border-border flex items-center justify-center">
+                <img src="../assets/images/icons/pintrest.svg" alt="pintrest" decoding="async" loading="lazy" />
+              </a>
+
+            </div>
+            <h3 class="font-medium text-sm tracking-wider mb-3 uppercase text-black">WE ACCEPT</h3>
+            <div class="flex gap-2">
+
+              <div class="w-8 h-8 rounded flex items-center justify-center text-[8px] font-bold overflow-hidden">
+                <img src="../assets/images/icons/visa.svg" alt="visa" decoding="async" loading="lazy"
+                  class="w-full h-full object-cover" />
+
+              </div>
+
+              <div class="w-8 h-8 rounded flex items-center justify-center text-[8px] font-bold overflow-hidden">
+                <img src="../assets/images/icons/rupay.svg" alt="rupay" decoding="async" loading="lazy"
+                  class="w-full h-full object-cover" />
+              </div>
+
+              <div class="w-8 h-8 rounded flex items-center justify-center text-[8px] font-bold overflow-hidden">
+                <img src="../assets/images/icons/paypal.svg" alt="paypal" decoding="async" loading="lazy"
+                  class="w-full h-full object-cover" />
+              </div>
+
+              <div class="w-8 h-8 rounded flex items-center justify-center text-[8px] font-bold overflow-hidden">
+                <img src="../assets/images/icons/payment.svg" alt="master card" decoding="async" loading="lazy"
+                  class="w-full h-full object-cover" />
+              </div>
+
+            </div>
+          </div>
+
+
+          <div>
+            <h3 class="font-bold text-sm tracking-wider mb-4">SHOP ONLINE</h3>
+            <ul class="space-y-3">
+
+              <li><a href="#"
+                  class="text-sm text-[#565656] hover:underline hover:underline-offset-4 hover:text-primary transition-colors">New
+                  Arrivals</a></li>
+              <li><a href="#"
+                  class="text-sm text-[#565656] hover:underline hover:underline-offset-4 hover:text-primary transition-colors">Banarasi
+                  Sarees</a></li>
+              <li><a href="#"
+                  class="text-sm text-[#565656] hover:underline hover:underline-offset-4 hover:text-primary transition-colors">Designer
+                  Lehengas</a></li>
+              <li><a href="#"
+                  class="text-sm text-[#565656] hover:underline hover:underline-offset-4 hover:text-primary transition-colors">Party
+                  Wear Suits</a></li>
+              <li><a href="#"
+                  class="text-sm text-[#565656] hover:underline hover:underline-offset-4 hover:text-primary transition-colors">Festive
+                  Collection</a></li>
+              <li><a href="#"
+                  class="text-sm text-[#565656] hover:underline hover:underline-offset-4 hover:text-primary transition-colors">Sale</a>
+              </li>
+
+            </ul>
+          </div>
+
+
+          <div>
+            <h3 class="font-bold text-sm tracking-wider mb-4">CUSTOMER CARE</h3>
+            <ul class="space-y-3">
+
+              <li><a href="#"
+                  class="text-sm text-[#565656] hover:underline hover:underline-offset-4 hover:text-primary transition-colors">Track
+                  Order</a></li>
+              <li><a href="#"
+                  class="text-sm text-[#565656] hover:underline hover:underline-offset-4 hover:text-primary transition-colors">Return
+                  & Exchange</a></li>
+              <li><a href="#"
+                  class="text-sm text-[#565656] hover:underline hover:underline-offset-4 hover:text-primary transition-colors">Shipping
+                  Policy</a></li>
+              <li><a href="#"
+                  class="text-sm text-[#565656] hover:underline hover:underline-offset-4 hover:text-primary transition-colors">Terms
+                  & Conditions</a></li>
+              <li><a href="#"
+                  class="text-sm text-[#565656] hover:underline hover:underline-offset-4 hover:text-primary transition-colors">Privacy
+                  Policy</a></li>
+              <li><a href="#"
+                  class="text-sm text-[#565656] hover:underline hover:underline-offset-4 hover:text-primary transition-colors">Contact
+                  Us</a></li>
+
+            </ul>
+          </div>
+
+
+          <div>
+            <h3 class="font-bold text-sm tracking-wider mb-2">STAY CONNECTED</h3>
+            <p class="text-sm mb-4 text-[#565656] font-normal">Subscribe to get exclusive offers and new launch updates.
+            </p>
+            <div class="flex mb-6 bg-white items-center">
+              <Input placeholder="Enter your email" class="text-sm h-full border-0 outline-0 max-w-[230px] w-full" />
+              <Button aria-pressed="false" aria-label="join" type="button"
+                class="rounded-l-none bg-primary px-6 font-bold text-sm py-2 text-white cursor-pointer">JOIN</Button>
+            </div>
+            <div class="space-y-4 text-sm font-normal">
+              <div class="flex items-start gap-3">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-map-pin-icon lucide-map-pin text-primary">
+                    <path
+                      d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </span>
+                <span class="text-[#565656]">D-200, Omicron-2, Greater Noida,
+                  Uttar Pradesh - 201310</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-phone-icon lucide-phone text-primary">
+                    <path
+                      d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+                  </svg>
+                </span>
+                <span class="text-[#565656]">+91 9211388816</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-mail-icon lucide-mail text-primary">
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                  </svg>
+                </span>
+                <span class="text-[#565656]">gg.enterprises200@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-border pt-8 mb-8">
+          <p class="text-center text-xs">
+            <span class="font-semibold text-[#666666]">POPULAR SEARCHES: </span>
+
+            <span class="text-[#666666] font-normal">
+              <span>
+                <a href="#"
+                  class="hover:underline hover:underline-offset-4 hover:text-primary transition-colors">Banarasi Silk
+                  Sarees</a>
+                |
+              </span>
+              <span>
+                <a href="#"
+                  class="hover:underline hover:underline-offset-4 hover:text-primary transition-colors">Georgette Party
+                  Wear</a>
+                |
+              </span>
+              <span>
+                <a href="#"
+                  class="hover:underline hover:underline-offset-4 hover:text-primary transition-colors">Wedding
+                  Lehengas</a>
+                |
+              </span>
+            </span>
+          </p>
+        </div>
+
+        <div class="border-t border-border py-6">
+          <p class="text-center text-xs text-[#666666]">© 2026 GG Fashion. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+
+  <script src="../assets/js/products.js"></script>
+  <script>
+    const productGrid = document.getElementById("product-grid");
+    const resultsQuery = document.getElementById("results-query");
+    const resultsCount = document.getElementById("results-count");
+    const sortControls = document.querySelectorAll("[data-sort-control]");
+    const paginationPages = document.getElementById("pagination-pages");
+    const paginationNext = document.getElementById("pagination-next");
+    const mobileFilterOpen = document.getElementById("mobile-filter-open");
+    const mobileFilterClose = document.getElementById("mobile-filter-close");
+    const mobileFilterPanel = document.getElementById("mobile-filter-panel");
+    const mobileFilterOverlay = document.getElementById("mobile-filter-overlay");
+    const filterCheckboxes = document.querySelectorAll("input[type='checkbox'][data-filter-key]");
+    const filterButtons = document.querySelectorAll("button[data-filter-key][data-filter-value]");
+    const PAGE_SIZE = 12;
+    const WISHLIST_STORAGE_KEY = "gg_fashion_wishlist_ids";
+    let allProducts = [];
+    let sourceProducts = [];
+    let currentPage = 1;
+    let currentQueryLabel = "Products";
+    let currentSortValue = "newest";
+    const filterState = {
+      category: new Set(),
+      price: new Set(),
+      occasion: new Set(),
+      fabric: new Set(),
+      work: new Set(),
+      size: new Set(),
+      color: new Set(),
+      discount: new Set(),
+    };
+
+    function normalizeValue(value) {
+      return String(value || "").trim().toLowerCase();
+    }
+
+    function toSlug(value) {
+      return String(value || "")
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    }
+
+    function formatRupee(value) {
+      return new Intl.NumberFormat("en-IN", {
+        style: "currency",
+        currency: "INR",
+        maximumFractionDigits: 0,
+      }).format(value);
+    }
+
+    function getWishlistSet() {
+      try {
+        const raw = localStorage.getItem(WISHLIST_STORAGE_KEY);
+        const parsed = raw ? JSON.parse(raw) : [];
+        if (!Array.isArray(parsed)) {
+          return new Set();
+        }
+        return new Set(
+          parsed.map(function (id) { return Number(id); }).filter(function (id) {
+            return Number.isFinite(id) && id > 0;
+          })
+        );
+      } catch (error) {
+        return new Set();
+      }
+    }
+
+    function renderProducts(productList) {
+      if (!productGrid) {
+        return;
+      }
+
+      const wishlistSet = getWishlistSet();
+
+      productGrid.innerHTML = productList.map((product) => `
+        <a href="product-details.html?id=${product.id}" class="flex flex-col gap-2 sm:gap-3" data-product-id="${product.id}">
+          <div class="relative overflow-hidden rounded-lg aspect-3/4 group">
+            <img src="${product.image}" alt="${product.name}" decoding="async" loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+
+            <button type="button" data-product-id="${product.id}" aria-pressed="${wishlistSet.has(Number(product.id))}" aria-label="Add to wishlist" class="js-wishlist-btn
+              absolute top-2 right-2 sm:top-3 sm:right-3
+              w-8 h-8 sm:w-9 sm:h-9
+              rounded-full bg-white/30 backdrop-blur-sm
+              flex items-center justify-center
+              hover:bg-white/50 transition-colors
+              z-30 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" class="sm:w-[19px] sm:h-[19px]"
+                viewBox="0 0 24 24" fill="${wishlistSet.has(Number(product.id)) ? "#E91E63" : "none"}"
+                stroke="${wishlistSet.has(Number(product.id)) ? "#E91E63" : "white"}" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="px-1 sm:px-0">
+            <p class="text-[10px] sm:text-xs text-[#888888] uppercase font-semibold">
+              ${product.brand}
+            </p>
+
+            <h3 class="font-normal truncate text-sm sm:text-base text-text-secondary leading-snug">
+              ${product.name}
+            </h3>
+
+            <div class="flex items-center gap-1 sm:gap-2 mt-1">
+              <span class="text-sm sm:text-lg font-bold text-text-secondary">
+                ${formatRupee(product.price)}
+              </span>
+            </div>
+          </div>
+        </a>
+      `).join("");
+    }
+
+    function updateResultsMeta(productList, queryLabel) {
+      if (resultsQuery) {
+        resultsQuery.textContent = `"${queryLabel}"`;
+      }
+      if (resultsCount) {
+        resultsCount.textContent = `(${productList.length} items)`;
+      }
+    }
+
+    function updateFilterCounts(productList) {
+      const countNodes = document.querySelectorAll("[data-filter-count-key][data-filter-count-value]");
+      countNodes.forEach(function (node) {
+        const key = node.dataset.filterCountKey;
+        const value = normalizeValue(node.dataset.filterCountValue);
+
+        const matchedCount = productList.filter(function (product) {
+          const fieldValue = product[key];
+          if (Array.isArray(fieldValue)) {
+            return fieldValue.map(normalizeValue).includes(value);
+          }
+          return normalizeValue(fieldValue) === value;
+        }).length;
+
+        node.textContent = "(" + matchedCount + ")";
+      });
+    }
+
+    function getProductSize(product) {
+      return product.id % 2 === 0 ? "s" : "xs";
+    }
+
+    function getProductDiscount(product) {
+      return ((product.id * 7) % 55) + 5;
+    }
+
+    function matchesPriceRange(productPrice, selectedRanges) {
+      if (!selectedRanges.size) {
+        return true;
+      }
+
+      return Array.from(selectedRanges).some(function (range) {
+        if (range === "below-1000") {
+          return productPrice < 1000;
+        }
+        if (range === "1000-2500") {
+          return productPrice >= 1000 && productPrice <= 2500;
+        }
+        return false;
+      });
+    }
+
+    function matchesProduct(product) {
+      const category = normalizeValue(product.category);
+      const fabric = normalizeValue(product.fabric);
+      const work = normalizeValue(product.work);
+      const color = normalizeValue(product.color);
+      const size = getProductSize(product);
+      const occasions = Array.isArray(product.occasion) ? product.occasion.map(normalizeValue) : [];
+      const discount = getProductDiscount(product);
+
+      if (filterState.category.size && !filterState.category.has(category)) {
+        return false;
+      }
+      if (!matchesPriceRange(product.price, filterState.price)) {
+        return false;
+      }
+      if (filterState.occasion.size && !occasions.some(function (item) { return filterState.occasion.has(item); })) {
+        return false;
+      }
+      if (filterState.fabric.size && !filterState.fabric.has(fabric)) {
+        return false;
+      }
+      if (filterState.work.size && !filterState.work.has(work)) {
+        return false;
+      }
+      if (filterState.size.size && !filterState.size.has(size)) {
+        return false;
+      }
+      if (filterState.color.size && !filterState.color.has(color)) {
+        return false;
+      }
+      if (filterState.discount.size) {
+        const passesDiscount = Array.from(filterState.discount).some(function (threshold) {
+          return discount >= Number(threshold);
+        });
+        if (!passesDiscount) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+    function applyFilterButtonState(button, isActive) {
+      const key = button.dataset.filterKey;
+      if (key === "size") {
+        button.classList.toggle("bg-primary", isActive);
+        button.classList.toggle("text-white", isActive);
+        button.classList.toggle("border-primary", isActive);
+        button.classList.toggle("text-[#444444]", !isActive);
+        button.classList.toggle("border-[#e0e0e0]", !isActive);
+        return;
+      }
+
+      if (key === "color") {
+        button.classList.toggle("border-black", isActive);
+        button.classList.toggle("border-transparent", !isActive);
+      }
+    }
+
+    function applyFiltersSortAndRender(resetPage) {
+      const filteredProducts = sourceProducts.filter(matchesProduct);
+      allProducts = getSortedProducts(filteredProducts, currentSortValue);
+
+      if (resetPage) {
+        currentPage = 1;
+      } else {
+        const totalPages = Math.max(1, Math.ceil(allProducts.length / PAGE_SIZE));
+        currentPage = Math.min(currentPage, totalPages);
+      }
+
+      updateResultsMeta(allProducts, currentQueryLabel);
+      renderCurrentPage();
+    }
+
+    function setupFilterControlMetadata() {
+      filterCheckboxes.forEach(function (checkbox, index) {
+        const key = checkbox.dataset.filterKey || "filter";
+        const value = checkbox.dataset.filterValue || ("option-" + (index + 1));
+        const generatedId = key + "-" + toSlug(value) + "-" + (index + 1);
+
+        checkbox.name = key;
+        checkbox.id = generatedId;
+
+        const wrapper = checkbox.closest(".flex.items-center.gap-2");
+        const label = wrapper ? wrapper.querySelector("label") : null;
+        if (label) {
+          label.setAttribute("for", generatedId);
+        }
+      });
+    }
+
+    function setSortValue(nextValue) {
+      currentSortValue = nextValue || "newest";
+      sortControls.forEach(function (control) {
+        control.value = currentSortValue;
+      });
+    }
+
+    function openMobileFilterPanel() {
+      if (!mobileFilterPanel || !mobileFilterOverlay) {
+        return;
+      }
+      mobileFilterPanel.classList.remove("-translate-x-full");
+      mobileFilterOverlay.classList.remove("hidden");
+      document.body.classList.add("overflow-hidden");
+      refreshAccordionHeights();
+    }
+
+    function closeMobileFilterPanel() {
+      if (!mobileFilterPanel || !mobileFilterOverlay) {
+        return;
+      }
+      mobileFilterPanel.classList.add("-translate-x-full");
+      mobileFilterOverlay.classList.add("hidden");
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    function refreshAccordionHeights() {
+      const accordionContents = document.querySelectorAll("[data-accordion-content]");
+      accordionContents.forEach(function (content) {
+        if (content.dataset.accordionOpen === "true") {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+
+    function setupFilterAccordions() {
+      if (!mobileFilterPanel) {
+        return;
+      }
+
+      const sectionNodes = Array.from(mobileFilterPanel.children);
+
+      sectionNodes.forEach(function (sectionNode) {
+        const header = sectionNode.querySelector(":scope > .flex.items-center.justify-between.py-3");
+        if (!header) {
+          return;
+        }
+
+        const content = header.nextElementSibling;
+        if (!content) {
+          return;
+        }
+
+        const minusIcon = header.querySelector(".lucide-minus");
+        const plusIcon = header.querySelector(".lucide-plus");
+        if (!minusIcon || !plusIcon) {
+          return;
+        }
+
+        header.classList.add("cursor-pointer");
+        header.setAttribute("role", "button");
+        header.setAttribute("tabindex", "0");
+        header.setAttribute("aria-expanded", "true");
+
+        content.dataset.accordionContent = "true";
+        content.dataset.accordionOpen = "true";
+        content.style.overflow = "hidden";
+        content.style.transition = "max-height 0.3s ease";
+        content.style.maxHeight = content.scrollHeight + "px";
+
+        plusIcon.style.display = "none";
+        minusIcon.style.display = "inline-block";
+
+        function toggleAccordion() {
+          const isOpen = content.dataset.accordionOpen === "true";
+          const nextOpen = !isOpen;
+
+          content.dataset.accordionOpen = nextOpen ? "true" : "false";
+          content.style.maxHeight = nextOpen ? content.scrollHeight + "px" : "0px";
+          header.setAttribute("aria-expanded", nextOpen ? "true" : "false");
+          plusIcon.style.display = nextOpen ? "none" : "inline-block";
+          minusIcon.style.display = nextOpen ? "inline-block" : "none";
+        }
+
+        header.addEventListener("click", toggleAccordion);
+        header.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            toggleAccordion();
+          }
+        });
+      });
+    }
+
+    function getSortedProducts(productList, sortValue) {
+      const items = productList.slice();
+
+      switch (sortValue) {
+        case "oldest":
+          return items.sort(function (a, b) { return a.id - b.id; });
+        case "price-low":
+          return items.sort(function (a, b) { return a.price - b.price; });
+        case "price-high":
+          return items.sort(function (a, b) { return b.price - a.price; });
+        case "newest":
+        default:
+          return items.sort(function (a, b) { return b.id - a.id; });
+      }
+    }
+
+    function renderPagination(totalItems, page) {
+      if (!paginationPages || !paginationNext) {
+        return;
+      }
+
+      const totalPages = Math.max(1, Math.ceil(totalItems / PAGE_SIZE));
+
+      paginationPages.innerHTML = Array.from({ length: totalPages }, function (_, index) {
+        const pageNumber = index + 1;
+        const isActive = pageNumber === page;
+        const activeClasses = "bg-primary text-white";
+        const defaultClasses = "text-text-secondary border border-[#dddddd]";
+        return `
+          <button
+            type="button"
+            data-page="${pageNumber}"
+            class="md:size-10 size-8 shrink-0 flex items-center justify-center font-normal cursor-pointer ${isActive ? activeClasses : defaultClasses}"
+          >${pageNumber}</button>
+        `;
+      }).join("");
+
+      const isLastPage = page >= totalPages;
+      paginationNext.disabled = isLastPage;
+      paginationNext.classList.toggle("opacity-50", isLastPage);
+      paginationNext.classList.toggle("cursor-not-allowed", isLastPage);
+    }
+
+    function renderCurrentPage() {
+      const start = (currentPage - 1) * PAGE_SIZE;
+      const end = start + PAGE_SIZE;
+      renderProducts(allProducts.slice(start, end));
+      renderPagination(allProducts.length, currentPage);
+    }
+
+    if (paginationPages) {
+      paginationPages.addEventListener("click", function (event) {
+        const pageButton = event.target.closest("[data-page]");
+        if (!pageButton) {
+          return;
+        }
+        currentPage = Number(pageButton.dataset.page);
+        renderCurrentPage();
+      });
+    }
+
+    if (paginationNext) {
+      paginationNext.addEventListener("click", function () {
+        const totalPages = Math.max(1, Math.ceil(allProducts.length / PAGE_SIZE));
+        if (currentPage >= totalPages) {
+          return;
+        }
+        currentPage += 1;
+        renderCurrentPage();
+      });
+    }
+
+    sortControls.forEach(function (control) {
+      control.addEventListener("change", function () {
+        setSortValue(control.value);
+        applyFiltersSortAndRender(true);
+      });
+    });
+
+    setupFilterControlMetadata();
+    setupFilterAccordions();
+    setSortValue(currentSortValue);
+
+    if (mobileFilterOpen) {
+      mobileFilterOpen.addEventListener("click", openMobileFilterPanel);
+    }
+    if (mobileFilterClose) {
+      mobileFilterClose.addEventListener("click", closeMobileFilterPanel);
+    }
+    if (mobileFilterOverlay) {
+      mobileFilterOverlay.addEventListener("click", closeMobileFilterPanel);
+    }
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 768) {
+        closeMobileFilterPanel();
+      }
+      refreshAccordionHeights();
+    });
+
+    filterCheckboxes.forEach(function (checkbox) {
+      checkbox.addEventListener("change", function () {
+        const key = checkbox.dataset.filterKey;
+        const value = normalizeValue(checkbox.dataset.filterValue);
+        if (!key || !filterState[key]) {
+          return;
+        }
+
+        if (checkbox.checked) {
+          filterState[key].add(value);
+        } else {
+          filterState[key].delete(value);
+        }
+
+        applyFiltersSortAndRender(true);
+      });
+    });
+
+    filterButtons.forEach(function (button) {
+      applyFilterButtonState(button, false);
+
+      button.addEventListener("click", function () {
+        const key = button.dataset.filterKey;
+        const value = normalizeValue(button.dataset.filterValue);
+        if (!key || !filterState[key]) {
+          return;
+        }
+
+        const isActive = filterState[key].has(value);
+        if (isActive) {
+          filterState[key].delete(value);
+        } else {
+          filterState[key].add(value);
+        }
+
+        applyFilterButtonState(button, !isActive);
+        applyFiltersSortAndRender(true);
+      });
+    });
+
+    async function loadProducts() {
+      try {
+        const catalogProducts = window.productCatalog && Array.isArray(window.productCatalog.products)
+          ? window.productCatalog.products
+          : [];
+
+        if (catalogProducts.length) {
+          sourceProducts = catalogProducts.slice();
+        } else {
+          const response = await fetch("../assets/api/products.json", { cache: "no-store" });
+          if (!response.ok) {
+            throw new Error("Unable to fetch product data");
+          }
+          const payload = await response.json();
+          sourceProducts = Array.isArray(payload) ? payload : (payload.products || []);
+        }
+
+        updateFilterCounts(sourceProducts);
+        const params = new URLSearchParams(window.location.search);
+        currentQueryLabel = params.get("q") || params.get("category") || (sourceProducts[0] && sourceProducts[0].category) || "Products";
+        applyFiltersSortAndRender(true);
+      } catch (error) {
+        if (productGrid) {
+          productGrid.innerHTML = `<p class="col-span-3 text-sm text-[#666666]">Products load nahi ho paaye. Please refresh.</p>`;
+        }
+        console.error(error);
+      }
+    }
+
+    loadProducts();
+  </script>
+
+  <script src="../assets/js/index.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

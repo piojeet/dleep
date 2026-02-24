@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/InterTight[wght].woff2') format('woff2'),
+         url('../assets/fonts/InterTight[wght].woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  @theme {
+    /* Brand Colors */
+    --color-primary: #E91E63;
+    --color-primary-dark: #8B1E3F;
+    --color-primary-hover: #741832;
+    --color-accent: #FFCFDF;
+    --color-accent-light: #F8C8D8;
+  
+    /* Background */
+    --color-bg-main: #FFFFFF;
+    --color-bg-light: #F5F5F5;
+    --color-bg-card: #FFFFFF;
+  
+    /* Text */
+    --color-text-main: #343434;
+    --color-text-secondary: #1A1A1A;
+    --color-text-light: #9CA3AF;
+  
+    /* UI Elements */
+    --color-border: #E0E0E0;
+    --color-border-secondary: #F0F0F0;
+    --color-discount: #D63384;
+  
+    /* Status Colors */
+    --color-success-bg: #DFF5E1;
+    --color-success: #22C55E;
+  }

@@ -1,0 +1,325 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Chinon Silk Party Wear - Embroidered",
+      "price": 1914,
+      "fabric": "Chinon Silk",
+      "category": "Sarees",
+      "occasion": [
+        "Party Wear"
+      ],
+      "work": "Embroidered",
+      "color": "Pink",
+      "isFavorite": false
+    },
+    {
+      "id": 2,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Georgette Wedding Saree - Zari Work",
+      "price": 2399,
+      "fabric": "Georgette",
+      "category": "Sarees",
+      "occasion": [
+        "Wedding"
+      ],
+      "work": "Zari Work",
+      "color": "Red",
+      "isFavorite": false
+    },
+    {
+      "id": 3,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Banarasi Silk Festive Saree",
+      "price": 2799,
+      "fabric": "Banarasi Silk",
+      "category": "Sarees",
+      "occasion": [
+        "Festival",
+        "Party Wear"
+      ],
+      "work": "Woven",
+      "color": "Green",
+      "isFavorite": true
+    },
+    {
+      "id": 4,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Soft Silk Designer Saree",
+      "price": 3299,
+      "fabric": "Soft Silk",
+      "category": "Sarees",
+      "occasion": [
+        "Wedding",
+        "Party Wear"
+      ],
+      "work": "Embroidered",
+      "color": "Maroon",
+      "isFavorite": false
+    },
+    {
+      "id": 5,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Chiffon Casual Saree",
+      "price": 1499,
+      "fabric": "Chiffon",
+      "category": "Sarees",
+      "occasion": [
+        "Daily Wear"
+      ],
+      "work": "Printed",
+      "color": "Blue",
+      "isFavorite": false
+    },
+    {
+      "id": 6,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Net Party Wear Saree",
+      "price": 2199,
+      "fabric": "Net",
+      "category": "Sarees",
+      "occasion": [
+        "Party Wear"
+      ],
+      "work": "Stone Work",
+      "color": "Black",
+      "isFavorite": false
+    },
+    {
+      "id": 7,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Kanjivaram Silk Bridal Saree",
+      "price": 4599,
+      "fabric": "Kanjivaram Silk",
+      "category": "Sarees",
+      "occasion": [
+        "Wedding"
+      ],
+      "work": "Zari Work",
+      "color": "Gold",
+      "isFavorite": false
+    },
+    {
+      "id": 8,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Organza Floral Party Saree",
+      "price": 2099,
+      "fabric": "Organza",
+      "category": "Sarees",
+      "occasion": [
+        "Party Wear"
+      ],
+      "work": "Printed",
+      "color": "Lavender",
+      "isFavorite": false
+    },
+    {
+      "id": 9,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Linen Summer Comfort Saree",
+      "price": 1699,
+      "fabric": "Linen",
+      "category": "Sarees",
+      "occasion": [
+        "Daily Wear"
+      ],
+      "work": "Plain",
+      "color": "Beige",
+      "isFavorite": false
+    },
+    {
+      "id": 10,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Tussar Silk Festival Saree",
+      "price": 2899,
+      "fabric": "Tussar Silk",
+      "category": "Sarees",
+      "occasion": [
+        "Festival"
+      ],
+      "work": "Woven",
+      "color": "Mustard",
+      "isFavorite": true
+    },
+    {
+      "id": 11,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Crepe Office Wear Saree",
+      "price": 1899,
+      "fabric": "Crepe",
+      "category": "Sarees",
+      "occasion": [
+        "Office Wear"
+      ],
+      "work": "Printed",
+      "color": "Navy",
+      "isFavorite": false
+    },
+    {
+      "id": 12,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Chanderi Festive Border Saree",
+      "price": 2599,
+      "fabric": "Chanderi",
+      "category": "Sarees",
+      "occasion": [
+        "Festival",
+        "Party Wear"
+      ],
+      "work": "Embroidered",
+      "color": "Peach",
+      "isFavorite": false
+    },
+    {
+      "id": 13,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Paithani Heritage Saree",
+      "price": 5199,
+      "fabric": "Silk",
+      "category": "Sarees",
+      "occasion": [
+        "Wedding",
+        "Festival"
+      ],
+      "work": "Zari Work",
+      "color": "Purple",
+      "isFavorite": true
+    },
+    {
+      "id": 14,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Bandhani Traditional Saree",
+      "price": 2299,
+      "fabric": "Georgette",
+      "category": "Sarees",
+      "occasion": [
+        "Festival"
+      ],
+      "work": "Printed",
+      "color": "Orange",
+      "isFavorite": false
+    },
+    {
+      "id": 15,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Velvet Party Glam Saree",
+      "price": 3899,
+      "fabric": "Velvet",
+      "category": "Sarees",
+      "occasion": [
+        "Party Wear"
+      ],
+      "work": "Stone Work",
+      "color": "Wine",
+      "isFavorite": false
+    },
+    {
+      "id": 16,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Cotton Handloom Daily Saree",
+      "price": 1399,
+      "fabric": "Cotton",
+      "category": "Sarees",
+      "occasion": [
+        "Daily Wear"
+      ],
+      "work": "Woven",
+      "color": "Sky Blue",
+      "isFavorite": false
+    },
+    {
+      "id": 17,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Jacquard Designer Wedding Saree",
+      "price": 3499,
+      "fabric": "Jacquard",
+      "category": "Sarees",
+      "occasion": [
+        "Wedding"
+      ],
+      "work": "Embroidered",
+      "color": "Emerald",
+      "isFavorite": false
+    },
+    {
+      "id": 18,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Satin Evening Party Saree",
+      "price": 2699,
+      "fabric": "Satin",
+      "category": "Sarees",
+      "occasion": [
+        "Party Wear"
+      ],
+      "work": "Plain",
+      "color": "Rose Gold",
+      "isFavorite": false
+    },
+    {
+      "id": 19,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Maheshwari Classic Saree",
+      "price": 2449,
+      "fabric": "Maheshwari",
+      "category": "Sarees",
+      "occasion": [
+        "Festival",
+        "Office Wear"
+      ],
+      "work": "Woven",
+      "color": "Teal",
+      "isFavorite": false
+    },
+    {
+      "id": 20,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Sequins Party Special Saree",
+      "price": 3199,
+      "fabric": "Net",
+      "category": "Sarees",
+      "occasion": [
+        "Party Wear"
+      ],
+      "work": "Sequins",
+      "color": "Silver",
+      "isFavorite": true
+    },
+    {
+      "id": 21,
+      "image": "../assets/images/arri1.avif",
+      "brand": "GG FASHION",
+      "name": "Art Silk Elegant Saree",
+      "price": 1999,
+      "fabric": "Art Silk",
+      "category": "Sarees",
+      "occasion": [
+        "Festival",
+        "Daily Wear"
+      ],
+      "work": "Printed",
+      "color": "Magenta",
+      "isFavorite": false
+    }
+  ]
+}
