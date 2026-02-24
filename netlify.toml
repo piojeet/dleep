@@ -2,82 +2,82 @@
   publish = "."
 
 [[redirects]]
-  from = "./src"
+  from = "/src"
   to = "/"
   status = 301
   force = true
 
 [[redirects]]
-  from = "./src/"
+  from = "/src/"
   to = "/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/"
-  to = "./src/index.html"
+  to = "/src/index.html"
   status = 200
 
 [[redirects]]
-  from = "./index.html"
-  to = "./src/index.html"
+  from = "/index.html"
+  to = "/src/index.html"
   status = 200
 
 [[redirects]]
-  from = "./output.css"
-  to = "./src/output.css"
+  from = "/output.css"
+  to = "/src/output.css"
   status = 200
 
 [[redirects]]
-  from = "./src/index.html"
+  from = "/src/index.html"
   to = "/"
   status = 301
   force = true
 
 [[redirects]]
-  from = "./cart"
+  from = "/cart"
   to = "/src/cart.html"
   status = 200
 
 [[redirects]]
-  from = "./cart.html"
-  to = "./src/cart.html"
+  from = "/cart.html"
+  to = "/src/cart.html"
   status = 200
 
 [[redirects]]
-  from = "./src/cart.html"
-  to = "./cart"
+  from = "/src/cart.html"
+  to = "/cart"
   status = 301
   force = true
 
 [[redirects]]
-  from = "./product"
-  to = "./src/product.html"
+  from = "/product"
+  to = "/src/product.html"
   status = 200
 
 [[redirects]]
-  from = "./product.html"
-  to = "./src/product.html"
+  from = "/product.html"
+  to = "/src/product.html"
   status = 200
 
 [[redirects]]
-  from = "./src/product.html"
-  to = "./product"
+  from = "/src/product.html"
+  to = "/product"
   status = 301
   force = true
 
 [[redirects]]
-  from = "./product-details"
-  to = "./src/product-details.html"
+  from = "/product-details"
+  to = "/src/product-details.html"
   status = 200
 
 [[redirects]]
-  from = "./product-details.html"
-  to = "./src/product-details.html"
+  from = "/product-details.html"
+  to = "/src/product-details.html"
   status = 200
 
 [[redirects]]
-  from = "./src/product-details.html"
-  to = "./product-details"
+  from = "/src/product-details.html"
+  to = "/product-details"
   status = 301
   force = true
