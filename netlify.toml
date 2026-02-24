@@ -2,6 +2,53 @@
   publish = "."
 
 [[redirects]]
+  from = "/src"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/src/*"
+  to = "/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/"
   to = "/src/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/index.html"
+  to = "/src/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/cart"
+  to = "/src/cart.html"
+  status = 200
+
+[[redirects]]
+  from = "/cart.html"
+  to = "/src/cart.html"
+  status = 200
+
+[[redirects]]
+  from = "/product"
+  to = "/src/product.html"
+  status = 200
+
+[[redirects]]
+  from = "/product.html"
+  to = "/src/product.html"
+  status = 200
+
+[[redirects]]
+  from = "/product-details"
+  to = "/src/product-details.html"
+  status = 200
+
+[[redirects]]
+  from = "/product-details.html"
+  to = "/src/product-details.html"
   status = 200
