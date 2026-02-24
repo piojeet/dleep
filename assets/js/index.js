@@ -613,7 +613,7 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
         '      </button>' +
         '    </div>' +
         '    <div class="px-1 sm:px-0">' +
-        '      <p class="text-[10px] sm:text-xs text-[#888888] uppercase font-semibold">' + productBrand + "</p>" +
+        '      <p class="text-[10px] sm:text-xs text-text-muted uppercase font-semibold">' + productBrand + "</p>" +
         '      <h3 class="font-normal truncate text-sm sm:text-base text-text-secondary leading-snug">' + productName + "</h3>" +
         '      <div class="flex items-center gap-1 sm:gap-2 mt-1">' +
         '        <span class="text-sm sm:text-lg font-bold text-text-secondary">' + productPrice + "</span>" +
@@ -1191,7 +1191,7 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
           '      </button>' +
           '    </div>' +
           '    <div class="px-1 sm:px-0">' +
-          '      <p class="text-[10px] sm:text-xs text-[#888888] uppercase font-semibold">' + similarBrand + "</p>" +
+          '      <p class="text-[10px] sm:text-xs text-text-muted uppercase font-semibold">' + similarBrand + "</p>" +
           '      <h3 class="font-normal truncate text-sm sm:text-base text-text-secondary leading-snug">' + similarName + "</h3>" +
           '      <div class="flex items-center gap-1 sm:gap-2 mt-1">' +
           '        <span class="text-sm sm:text-lg font-bold text-text-secondary">' + similarPrice + "</span>" +
@@ -1824,3 +1824,4 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
       }
     });
   }
+

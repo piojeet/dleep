@@ -134,7 +134,7 @@
         '  <div class="flex-1 min-w-0 space-y-2">' +
         '    <div class="flex justify-between items-start">' +
         '      <div class="js-cart-product-info" data-product-id="' + product.id + '">' +
-        '        <div class="js-cart-brand uppercase text-[#888888] tracking-[1.2px] font-semibold md:text-sm text-xs">' + brand + '</div>' +
+        '        <div class="js-cart-brand uppercase text-text-muted tracking-[1.2px] font-semibold md:text-sm text-xs">' + brand + '</div>' +
         '        <h1 class="js-cart-title text-sm md:text-lg font-semibold line-clamp-2 text-[#333333]">' + title + '</h1>' +
         '      </div>' +
         '      <div class="js-cart-delivery text-sm text-[#2E7D32] font-normal hidden sm:flex items-center gap-1" data-product-id="' + product.id + '">' +
@@ -1004,3 +1004,4 @@
 
   renderSummary(false);
 })();
+

@@ -1133,3 +1133,4 @@ const products = [
 window.productCatalog = {
   products,
 };
+
