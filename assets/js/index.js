@@ -1336,14 +1336,73 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
   var productThumbNextButton = document.querySelector(".js-product-thumb-next");
   var isProductImageZoomed = false;
   var activeProductThumbIndex = 0;
+  var productZoomScale = 1;
+  var productPanX = 0;
+  var productPanY = 0;
+  var productPinchStartDistance = 0;
+  var productPinchStartScale = 1;
+  var isProductTouchDragging = false;
+  var productTouchDragStartX = 0;
+  var productTouchDragStartY = 0;
+  var productRectCache = null;
+  var productTransformRafId = 0;
+  var isCoarsePointer = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+  var productMaxZoomScale = isCoarsePointer ? 2.2 : 3;
 
   if (productImageContainer && productMainImage && productZoomToggle) {
-    function setProductImageZoomState(nextZoomState) {
-      isProductImageZoomed = nextZoomState;
-      productMainImage.style.transform = isProductImageZoomed ? "scale(1.8)" : "scale(1)";
+    function clampProductZoomScale(scale) {
+      return Math.max(1, Math.min(scale, productMaxZoomScale));
+    }
+
+    function updateProductZoomUI() {
+      isProductImageZoomed = productZoomScale > 1.01;
       productMainImage.style.cursor = isProductImageZoomed ? "zoom-out" : "zoom-in";
       productZoomToggle.setAttribute("aria-pressed", String(isProductImageZoomed));
       productZoomToggle.setAttribute("aria-label", isProductImageZoomed ? "Zoom out image" : "Zoom in image");
+      productImageContainer.style.touchAction = isProductImageZoomed ? "none" : "manipulation";
+    }
+
+    function clampProductPan() {
+      if (!isProductImageZoomed) {
+        productPanX = 0;
+        productPanY = 0;
+        return;
+      }
+
+      var rect = productRectCache || productImageContainer.getBoundingClientRect();
+      var maxPanX = ((productZoomScale - 1) * rect.width) / 2;
+      var maxPanY = ((productZoomScale - 1) * rect.height) / 2;
+
+      productPanX = Math.max(-maxPanX, Math.min(productPanX, maxPanX));
+      productPanY = Math.max(-maxPanY, Math.min(productPanY, maxPanY));
+    }
+
+    function applyProductImageTransform() {
+      if (productTransformRafId) {
+        return;
+      }
+      productTransformRafId = window.requestAnimationFrame(function () {
+        productTransformRafId = 0;
+        productMainImage.style.transformOrigin = "center center";
+        productMainImage.style.transform = "translate3d(" + productPanX + "px, " + productPanY + "px, 0) scale(" + productZoomScale + ")";
+      });
+    }
+
+    function refreshProductRectCache() {
+      productRectCache = productImageContainer.getBoundingClientRect();
+    }
+
+    function setProductImageZoomState(nextZoomState) {
+      productMainImage.style.transition = isCoarsePointer ? "none" : "transform 220ms ease";
+      refreshProductRectCache();
+      productZoomScale = nextZoomState ? 1.8 : 1;
+      if (!nextZoomState) {
+        productPanX = 0;
+        productPanY = 0;
+      }
+      updateProductZoomUI();
+      clampProductPan();
+      applyProductImageTransform();
     }
 
     function setProductMainImageFromThumb(index) {
@@ -1369,7 +1428,6 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
         productMainImage.removeAttribute("srcset");
       }
       productMainImage.setAttribute("alt", nextAlt);
-      productMainImage.style.transformOrigin = "center center";
       setProductImageZoomState(false);
     }
 
@@ -1408,6 +1466,9 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
     });
 
     productImageContainer.addEventListener("click", function (event) {
+      if (isCoarsePointer) {
+        return;
+      }
       if (event.target.closest(".js-product-zoom-toggle")) {
         return;
       }
@@ -1418,18 +1479,109 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
       if (!isProductImageZoomed) {
         return;
       }
-      var rect = productImageContainer.getBoundingClientRect();
-      var xPercent = ((event.clientX - rect.left) / rect.width) * 100;
-      var yPercent = ((event.clientY - rect.top) / rect.height) * 100;
-      productMainImage.style.transformOrigin = xPercent + "% " + yPercent + "%";
+      var rect = productRectCache || productImageContainer.getBoundingClientRect();
+      var xRatio = (event.clientX - rect.left) / rect.width;
+      var yRatio = (event.clientY - rect.top) / rect.height;
+      var maxPanX = ((productZoomScale - 1) * rect.width) / 2;
+      var maxPanY = ((productZoomScale - 1) * rect.height) / 2;
+      productPanX = (0.5 - xRatio) * 2 * maxPanX;
+      productPanY = (0.5 - yRatio) * 2 * maxPanY;
+      clampProductPan();
+      applyProductImageTransform();
     });
 
     productImageContainer.addEventListener("mouseleave", function () {
       if (isProductImageZoomed) {
-        productMainImage.style.transformOrigin = "center center";
+        productPanX = 0;
+        productPanY = 0;
+        applyProductImageTransform();
       }
     });
 
+    function getTouchesDistance(touchA, touchB) {
+      var dx = touchA.clientX - touchB.clientX;
+      var dy = touchA.clientY - touchB.clientY;
+      return Math.sqrt(dx * dx + dy * dy);
+    }
+
+    productImageContainer.addEventListener("touchstart", function (event) {
+      refreshProductRectCache();
+      if (event.touches.length === 2) {
+        event.preventDefault();
+        productMainImage.style.transition = "none";
+        productPinchStartDistance = getTouchesDistance(event.touches[0], event.touches[1]);
+        productPinchStartScale = productZoomScale;
+        isProductTouchDragging = false;
+        return;
+      }
+
+      if (event.touches.length === 1 && isProductImageZoomed) {
+        productMainImage.style.transition = "none";
+        isProductTouchDragging = true;
+        productTouchDragStartX = event.touches[0].clientX - productPanX;
+        productTouchDragStartY = event.touches[0].clientY - productPanY;
+      }
+    }, { passive: false });
+
+    productImageContainer.addEventListener("touchmove", function (event) {
+      if (event.touches.length === 2 && productPinchStartDistance > 0) {
+        event.preventDefault();
+        var currentDistance = getTouchesDistance(event.touches[0], event.touches[1]);
+        var nextScale = clampProductZoomScale(productPinchStartScale * (currentDistance / productPinchStartDistance));
+        productZoomScale = nextScale;
+        updateProductZoomUI();
+        clampProductPan();
+        applyProductImageTransform();
+        return;
+      }
+
+      if (event.touches.length === 1 && isProductTouchDragging && isProductImageZoomed) {
+        event.preventDefault();
+        productPanX = event.touches[0].clientX - productTouchDragStartX;
+        productPanY = event.touches[0].clientY - productTouchDragStartY;
+        clampProductPan();
+        applyProductImageTransform();
+      }
+    }, { passive: false });
+
+    productImageContainer.addEventListener("touchend", function (event) {
+      if (event.touches.length < 2) {
+        productPinchStartDistance = 0;
+      }
+
+      if (event.touches.length === 0) {
+        isProductTouchDragging = false;
+        if (productZoomScale <= 1.01) {
+          setProductImageZoomState(false);
+        } else {
+          productMainImage.style.transition = isCoarsePointer ? "none" : "transform 150ms ease-out";
+          updateProductZoomUI();
+          clampProductPan();
+          applyProductImageTransform();
+        }
+        return;
+      }
+
+      if (event.touches.length === 1 && isProductImageZoomed) {
+        isProductTouchDragging = true;
+        productTouchDragStartX = event.touches[0].clientX - productPanX;
+        productTouchDragStartY = event.touches[0].clientY - productPanY;
+      }
+    }, { passive: true });
+
+    productImageContainer.addEventListener("touchcancel", function () {
+      isProductTouchDragging = false;
+      productPinchStartDistance = 0;
+      productMainImage.style.transition = isCoarsePointer ? "none" : "transform 150ms ease-out";
+    }, { passive: true });
+
+    window.addEventListener("resize", function () {
+      refreshProductRectCache();
+      clampProductPan();
+      applyProductImageTransform();
+    });
+
+    productMainImage.style.willChange = "transform";
     if (productThumbButtons.length) {
       productThumbButtons.forEach(function (button, index) {
         button.addEventListener("click", function () {
@@ -1454,6 +1606,7 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
       });
     }
 
+    productImageContainer.style.touchAction = "manipulation";
     setActiveProductThumb(activeProductThumbIndex);
   }
 
