@@ -8,8 +8,8 @@
   force = true
 
 [[redirects]]
-  from = "/src/*"
-  to = "/:splat"
+  from = "/src/"
+  to = "/"
   status = 301
   force = true
 
@@ -24,6 +24,12 @@
   status = 200
 
 [[redirects]]
+  from = "/src/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/cart"
   to = "/src/cart.html"
   status = 200
@@ -32,6 +38,12 @@
   from = "/cart.html"
   to = "/src/cart.html"
   status = 200
+
+[[redirects]]
+  from = "/src/cart.html"
+  to = "/cart"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/product"
@@ -44,6 +56,12 @@
   status = 200
 
 [[redirects]]
+  from = "/src/product.html"
+  to = "/product"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/product-details"
   to = "/src/product-details.html"
   status = 200
@@ -52,3 +70,9 @@
   from = "/product-details.html"
   to = "/src/product-details.html"
   status = 200
+
+[[redirects]]
+  from = "/src/product-details.html"
+  to = "/product-details"
+  status = 301
+  force = true
