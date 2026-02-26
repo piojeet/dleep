@@ -71,12 +71,19 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
     },
   }) : null;
 
+  var collectionNextSelector = document.querySelector(".swiper-button-next-similar")
+    ? ".swiper-button-next-similar"
+    : ".swiper-button-next-collection";
+  var collectionPrevSelector = document.querySelector(".swiper-button-prev-similar")
+    ? ".swiper-button-prev-similar"
+    : ".swiper-button-prev-collection";
+
   var collectionSwiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper-collection")) ? new Swiper(".mySwiper-collection", {
     slidesPerView: 1.5,
     spaceBetween: 12,
     navigation: {
-      nextEl: ".swiper-button-next-collection",
-      prevEl: ".swiper-button-prev-collection",
+      nextEl: collectionNextSelector,
+      prevEl: collectionPrevSelector,
     },
     breakpoints: {
       320: {
@@ -128,12 +135,25 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
       return;
     }
 
+    function setArrowState(button, isDisabled) {
+      if (!button) {
+        return;
+      }
+      button.classList.toggle("bg-primary", !isDisabled);
+      button.classList.toggle("text-white", !isDisabled);
+      button.classList.toggle("border-white", !isDisabled);
+      button.classList.toggle("opacity-100", !isDisabled);
+
+      button.classList.toggle("bg-white", isDisabled);
+      button.classList.toggle("text-hex-555555", isDisabled);
+      button.classList.toggle("border-hex-e0e0e0", isDisabled);
+      button.classList.toggle("opacity-70", isDisabled);
+    }
+
     if (categorySwiper.isEnd) {
-      nextButton.classList.remove("bg-primary", "text-white");
-      nextButton.classList.add("bg-[#E7E7E7]", "text-[#999999]");
+      setArrowState(nextButton, true);
     } else {
-      nextButton.classList.remove("bg-[#E7E7E7]", "text-[#999999]");
-      nextButton.classList.add("bg-primary", "text-white");
+      setArrowState(nextButton, false);
     }
 
     if (!prevButton) {
@@ -141,11 +161,9 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
     }
 
     if (categorySwiper.isBeginning) {
-      prevButton.classList.remove("bg-primary", "text-white");
-      prevButton.classList.add("bg-[#E7E7E7]", "text-[#999999]");
+      setArrowState(prevButton, true);
     } else {
-      prevButton.classList.remove("bg-[#E7E7E7]", "text-[#999999]");
-      prevButton.classList.add("bg-primary", "text-white");
+      setArrowState(prevButton, false);
     }
   }
 
@@ -163,12 +181,25 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
       return;
     }
 
+    function setArrowState(button, isDisabled) {
+      if (!button) {
+        return;
+      }
+      button.classList.toggle("bg-primary", !isDisabled);
+      button.classList.toggle("text-white", !isDisabled);
+      button.classList.toggle("border-white", !isDisabled);
+      button.classList.toggle("opacity-100", !isDisabled);
+
+      button.classList.toggle("bg-white", isDisabled);
+      button.classList.toggle("text-hex-555555", isDisabled);
+      button.classList.toggle("border-hex-e0e0e0", isDisabled);
+      button.classList.toggle("opacity-70", isDisabled);
+    }
+
     if (arrivalsSwiper.isEnd) {
-      nextButton.classList.remove("bg-primary", "text-white");
-      nextButton.classList.add("bg-[#E7E7E7]", "text-[#999999]");
+      setArrowState(nextButton, true);
     } else {
-      nextButton.classList.remove("bg-[#E7E7E7]", "text-[#999999]");
-      nextButton.classList.add("bg-primary", "text-white");
+      setArrowState(nextButton, false);
     }
 
     if (!prevButton) {
@@ -176,11 +207,9 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
     }
 
     if (arrivalsSwiper.isBeginning) {
-      prevButton.classList.remove("bg-primary", "text-white");
-      prevButton.classList.add("bg-[#E7E7E7]", "text-[#999999]");
+      setArrowState(prevButton, true);
     } else {
-      prevButton.classList.remove("bg-[#E7E7E7]", "text-[#999999]");
-      prevButton.classList.add("bg-primary", "text-white");
+      setArrowState(prevButton, false);
     }
   }
 
@@ -192,18 +221,31 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
   }
 
   function updateCollectionNavigationButtonsState() {
-    var nextButton = document.querySelector(".swiper-button-next-collection");
-    var prevButton = document.querySelector(".swiper-button-prev-collection");
+    var nextButton = document.querySelector(".swiper-button-next-similar, .swiper-button-next-collection");
+    var prevButton = document.querySelector(".swiper-button-prev-similar, .swiper-button-prev-collection");
     if (!nextButton || !collectionSwiper) {
       return;
     }
 
+    function setArrowState(button, isDisabled) {
+      if (!button) {
+        return;
+      }
+      button.classList.toggle("bg-primary", !isDisabled);
+      button.classList.toggle("text-white", !isDisabled);
+      button.classList.toggle("border-white", !isDisabled);
+      button.classList.toggle("opacity-100", !isDisabled);
+
+      button.classList.toggle("bg-white", isDisabled);
+      button.classList.toggle("text-hex-555555", isDisabled);
+      button.classList.toggle("border-hex-e0e0e0", isDisabled);
+      button.classList.toggle("opacity-70", isDisabled);
+    }
+
     if (collectionSwiper.isEnd) {
-      nextButton.classList.remove("bg-primary", "text-white");
-      nextButton.classList.add("bg-[#E7E7E7]", "text-[#999999]");
+      setArrowState(nextButton, true);
     } else {
-      nextButton.classList.remove("bg-[#E7E7E7]", "text-[#999999]");
-      nextButton.classList.add("bg-primary", "text-white");
+      setArrowState(nextButton, false);
     }
 
     if (!prevButton) {
@@ -211,11 +253,9 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
     }
 
     if (collectionSwiper.isBeginning) {
-      prevButton.classList.remove("bg-primary", "text-white");
-      prevButton.classList.add("bg-[#E7E7E7]", "text-[#999999]");
+      setArrowState(prevButton, true);
     } else {
-      prevButton.classList.remove("bg-[#E7E7E7]", "text-[#999999]");
-      prevButton.classList.add("bg-primary", "text-white");
+      setArrowState(prevButton, false);
     }
   }
 
@@ -233,12 +273,25 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
       return;
     }
 
+    function setArrowState(button, isDisabled) {
+      if (!button) {
+        return;
+      }
+      button.classList.toggle("bg-primary", !isDisabled);
+      button.classList.toggle("text-white", !isDisabled);
+      button.classList.toggle("border-white", !isDisabled);
+      button.classList.toggle("opacity-100", !isDisabled);
+
+      button.classList.toggle("bg-white", isDisabled);
+      button.classList.toggle("text-hex-555555", isDisabled);
+      button.classList.toggle("border-hex-e0e0e0", isDisabled);
+      button.classList.toggle("opacity-70", isDisabled);
+    }
+
     if (ratingSwiper.isEnd) {
-      nextButton.classList.remove("bg-primary", "text-white");
-      nextButton.classList.add("bg-[#E7E7E7]", "text-[#999999]");
+      setArrowState(nextButton, true);
     } else {
-      nextButton.classList.remove("bg-[#E7E7E7]", "text-[#999999]");
-      nextButton.classList.add("bg-primary", "text-white");
+      setArrowState(nextButton, false);
     }
 
     if (!prevButton) {
@@ -246,11 +299,9 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
     }
 
     if (ratingSwiper.isBeginning) {
-      prevButton.classList.remove("bg-primary", "text-white");
-      prevButton.classList.add("bg-[#E7E7E7]", "text-[#999999]");
+      setArrowState(prevButton, true);
     } else {
-      prevButton.classList.remove("bg-[#E7E7E7]", "text-[#999999]");
-      prevButton.classList.add("bg-primary", "text-white");
+      setArrowState(prevButton, false);
     }
   }
 
@@ -724,6 +775,25 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
       return Number(item.id) === requestedId;
     }) || catalogProducts[0];
 
+    function isProductInStock(item) {
+      if (item && typeof item.inStock === "boolean") {
+        return item.inStock;
+      }
+
+      var explicitStock = Number(item && item.stock);
+      if (Number.isFinite(explicitStock)) {
+        return explicitStock > 0;
+      }
+
+      if (Array.isArray(item && item.availableSizes)) {
+        return item.availableSizes.length > 0;
+      }
+
+      return true;
+    }
+
+    var isOutOfStock = !isProductInStock(product);
+
     var productPrice = Number(product.price) || 0;
     var productMrp = Number(product.mrp) || productPrice;
     var productDiscount = Number(product.discountPercent) || 0;
@@ -757,6 +827,7 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
     var mrpElement = document.querySelector(".js-product-mrp");
     var discountElement = document.querySelector(".js-product-discount");
     var taxElement = document.querySelector(".js-product-tax");
+    var stockStatusElement = document.querySelector(".js-product-stock-status");
     var descriptionElement = document.querySelector(".js-product-short-description");
     var reviewCountElement = document.querySelector(".js-product-review-count");
     var ratingStarsElement = document.querySelector(".js-product-rating-stars");
@@ -824,6 +895,15 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
     }
     if (taxElement) {
       taxElement.textContent = product.taxText || "";
+    }
+    if (stockStatusElement) {
+      if (isOutOfStock) {
+        stockStatusElement.textContent = "Out of Stock";
+        stockStatusElement.classList.remove("hidden");
+      } else {
+        stockStatusElement.textContent = "";
+        stockStatusElement.classList.add("hidden");
+      }
     }
     if (descriptionElement) {
       descriptionElement.textContent = description;
@@ -1083,6 +1163,9 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
 
     if (qtyToggleButton && qtyOptionsContainer) {
       qtyToggleButton.addEventListener("click", function () {
+        if (isOutOfStock) {
+          return;
+        }
         qtyOptionsContainer.classList.toggle("hidden");
       });
 
@@ -1094,7 +1177,27 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
       });
     }
 
+    if (isOutOfStock) {
+      if (qtyToggleButton) {
+        qtyToggleButton.setAttribute("disabled", "true");
+        qtyToggleButton.classList.add("opacity-50", "cursor-not-allowed");
+      }
+      if (addToCartButton) {
+        addToCartButton.setAttribute("disabled", "true");
+        addToCartButton.classList.add("opacity-50", "cursor-not-allowed");
+      }
+      if (buyNowButton) {
+        buyNowButton.setAttribute("disabled", "true");
+        buyNowButton.classList.add("opacity-50", "cursor-not-allowed");
+        buyNowButton.textContent = "Out of Stock";
+      }
+    }
+
     function saveProductToCart(redirectToCart) {
+      if (isOutOfStock) {
+        return;
+      }
+
       var cartStorageKey = "gg_fashion_cart_items";
       var nextItem = {
         id: Number(product.id),

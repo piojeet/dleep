@@ -37,6 +37,7 @@ const products = [
     },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
+    inStock: false,
     selectedSize: "M",
     colors: [
       { name: "Pink", swatch: "#B83280", image: saree1 },
@@ -90,6 +91,7 @@ const products = [
     },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
+    inStock: false,
     selectedSize: "M",
     colors: [
       { name: "Red", swatch: "#B83280", image: saree1 },
@@ -143,6 +145,7 @@ const products = [
     },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
+    inStock: false,
     selectedSize: "M",
     colors: [
       { name: "Green", swatch: "#B83280", image: saree1 },
@@ -197,6 +200,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Maroon", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -250,6 +254,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Blue", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -303,6 +308,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Black", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -356,6 +362,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Gold", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -409,6 +416,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Lavender", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -462,6 +470,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Beige", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -515,6 +524,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Mustard", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -568,6 +578,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Navy", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -621,6 +632,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Peach", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -674,6 +686,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Purple", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -727,6 +740,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Orange", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -780,6 +794,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Wine", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -833,6 +848,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Sky Blue", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -886,6 +902,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Emerald", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -939,6 +956,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Rose Gold", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -992,6 +1010,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Teal", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -1045,6 +1064,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Silver", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
@@ -1099,6 +1119,7 @@ const products = [
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     availableSizes: ["S", "M", "L", "XL"],
     selectedSize: "M",
+    inStock: true,
     colors: [
       { name: "Magenta", swatch: "#B83280", image: saree1 },
       { name: "Maroon", swatch: "#7B1E3A", image: saree1 },
