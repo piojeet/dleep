@@ -534,6 +534,7 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
         menu.classList.add("left-0");
         menu.classList.remove("-left-full");
       });
+      document.body.classList.add("overflow-hidden");
     }
 
     function closeAllMobileMenus() {
@@ -542,6 +543,7 @@ var swiper = (typeof Swiper !== "undefined" && document.querySelector(".mySwiper
         menu.classList.add("-left-full");
       });
       closeAllMobileDropdowns();
+      document.body.classList.remove("overflow-hidden");
     }
 
     mobileMenuToggles.forEach(function (toggle) {

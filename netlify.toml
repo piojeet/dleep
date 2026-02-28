@@ -81,3 +81,35 @@
   to = "/product-details"
   status = 301
   force = true
+[[redirects]]
+  from = "/login"
+  to = "/src/login.html"
+  status = 200
+
+[[redirects]]
+  from = "/login.html"
+  to = "/src/login.html"
+  status = 200
+
+[[redirects]]
+  from = "/src/login.html"
+  to = "/login"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/signup"
+  to = "/src/signup.html"
+  status = 200
+
+[[redirects]]
+  from = "/signup.html"
+  to = "/src/signup.html"
+  status = 200
+
+[[redirects]]
+  from = "/src/signup.html"
+  to = "/signup"
+  status = 301
+  force = true
+
